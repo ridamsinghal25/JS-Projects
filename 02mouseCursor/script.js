@@ -7,6 +7,7 @@ document.addEventListener("mousemove", (e) => {
   cursor.style.top = e.clientY + "px";
 
   cursor.style.backgroundColor = generateColor();
+  // cursor width
 });
 
 document.addEventListener("mouseenter", () => {
