@@ -1,5 +1,6 @@
-/*
+// Method 1
 
+/*
 
 const inputField = document.querySelector("#input-field");
 const outputBtn = document.querySelector("#output-field");
@@ -49,9 +50,14 @@ const input = document.querySelector("#input-field");
 const output = document.querySelector("#output-field");
 
 const btns = document.querySelectorAll(".btn");
+// console.log(btns);
+
+// console.log("Outside button");
 
 btns.forEach((btn) => {
+  // console.log("Inside button");
   btn.addEventListener("click", () => {
+    // console.log("Inside addEventListener", Math.floor(Math.random() * 100));
     let value = input.value;
     switch (checkClass(btn)) {
       case "uppercase":
