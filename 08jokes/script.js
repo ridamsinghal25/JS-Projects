@@ -3,7 +3,7 @@ const button = document.querySelector(".btn");
 const container = document.querySelector("#display-joke");
 let blocked = false;
 
-function fetchJokes() {
+button.addEventListener("click", () => {
   if (!blocked) {
     blocked = true;
     fetch(url)
@@ -19,9 +19,9 @@ function fetchJokes() {
         blocked = false;
       });
   }
-}
+});
 
-function xmlJokes() {
+button.addEventListener("click", () => {
   if (!blocked) {
     blocked = true;
     const xhr = new XMLHttpRequest();
@@ -43,9 +43,9 @@ function xmlJokes() {
 
     xhr.send();
   }
-}
-
-button.addEventListener("click", () => {
-  xmlJokes();
-  fetchJokes();
 });
+
+// button.addEventListener("click", () => {
+//   xmlJokes();
+//   fetchJokes();
+// });
